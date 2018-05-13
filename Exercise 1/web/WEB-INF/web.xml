@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <display-name>Vaggos Renting Car</display-name>
+    <description>
+        This is an application for course "Internet And Applications"
+        School of Electrical and Computer Engineering
+        National Technical University of Athens
+        Katsaboula Xristina-Sofia
+        Kerasiotis Ioannis 
+        Raftopoulos Evangelos
+    </description>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>Categories</servlet-name>
+        <servlet-class>Categories</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Products</servlet-name>
+        <servlet-class>Products</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Confirmation</servlet-name>
+        <servlet-class>Confirmation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Categories</servlet-name>
+        <url-pattern>/Categories</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Products</servlet-name>
+        <url-pattern>/Products/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Confirmation</servlet-name>
+        <url-pattern>/Confirmation</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
